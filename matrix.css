@@ -1,0 +1,76 @@
+body{
+    height: 100%
+    width: 100%;
+    background-color: #ffdead;
+}
+
+
+
+.hidden{
+    display: none;
+}
+
+.error{
+    border: 2px solid red;
+    background-color: #FFC2B2;
+    width: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+.divTable{
+    display: table;
+    margin: 0 auto;
+    font-family: Purisa, cursive;
+}
+.divTableRow{
+    display: table-row;
+}
+.divTableData{
+    display: table-cell;
+}
+.imgBracketTop{
+    width: 14px;
+    height: 7px;
+}
+.imgBracketMiddle{
+    width: 14px;
+    height: 100%;
+    min-height: 10px;
+}
+.imgBracketBottom{
+    width: 14px;
+    height: 5px;
+}
+.divCenterRow{
+    height: 15px;
+    transition: width 1s, height 1s;
+    -webkit-transition: width 1s, height 1s;
+}
+#divDataMatrix{
+    width: 0px;
+    float: left;
+    overflow: hidden;
+}
+.tableInnerMatrix{
+    border-collapse: collapse;
+    text-align: center;
+    float: right;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 1s;
+    -webkit-transition: visibility 1s, opacity 1s;
+    /*transition-delay: 1s;*/  /* use setInterval() */
+}
+.tableInnerMatrix td{
+    width: 3em;
+    height: 2.1em;
+}
+
