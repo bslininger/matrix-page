@@ -1,0 +1,141 @@
+body{
+    height: 100%
+    width: 100%;
+    background-color: #ffdead;
+}
+
+
+
+.hidden{
+    display: none;
+}
+
+.error{
+    border: 2px solid red;
+    background-color: #FFC2B2;
+    width: 30%;
+}
+
+
+
+
+
+
+
+
+
+
+.divTable{
+    display: table;
+    margin: 0 auto;
+    font-family: "Segoe Print", Purisa, cursive;
+}
+.divTableRow{
+    display: table-row;
+}
+.divTableData{
+    display: table-cell;
+}
+.imgBracketTop{
+    width: 14px;
+    height: 7px;
+}
+.imgBracketMiddle{
+    width: 14px;
+    height: 100%;
+    min-height: 10px;
+}
+.imgBracketBottom{
+    width: 14px;
+    height: 5px;
+}
+.divCenterRow{
+    height: 15px;
+    transition: width 1s, height 1s;
+    -webkit-transition: width 1s, height 1s;
+}
+#divDataMatrix{
+    width: 0px;
+    float: left;
+    overflow: hidden;
+}
+.tableInnerMatrix{
+    border-collapse: collapse;
+    text-align: center;
+    float: right;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 1s;
+    -webkit-transition: visibility 1s, opacity 1s;
+    /*transition-delay: 1s;*/  /* use setInterval() */
+}
+.tableInnerMatrix td{
+    width: 3em;
+    height: 2.1em;
+}
+
+
+
+
+/* Taken/adapted from http://nicolasgallagher.com/pure-css-speech-bubbles/ */
+.triangle-isosceles {
+  position:relative;
+  padding:3px;
+  margin:0;
+  margin-left:13px;
+  background:#ffa8a8;
+  border:2px solid red;
+  /* css3 */
+  /*background:-webkit-gradient(linear, 0 0, 0 100%, from(#f9d835), to(#f3961c));
+  background:-moz-linear-gradient(#f9d835, #f3961c);
+  background:-o-linear-gradient(#f9d835, #f3961c);
+  background:linear-gradient(#f9d835, #f3961c);*/
+  -webkit-border-radius:10px;
+  -moz-border-radius:10px;
+  border-radius:10px;
+}
+/*.triangle-isosceles.left {
+  margin-left:13px;
+  background:#ffa8a8;
+}*/
+/* creates triangle */
+.triangle-isosceles:before {
+  content:"";
+  position:absolute;
+  bottom:-20px; /* value = - border-top-width - border-bottom-width */
+  left:40px; /* controls horizontal position */
+  border-width:20px 20px 0;
+  border-style:solid;
+  border-color:red transparent;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+}
+.triangle-isosceles.left:before {
+  top:4px; /* controls vertical position */
+  bottom:auto;
+  left:-15px; /* value = - border-left-width - border-right-width */
+  border-width:8px 15px 8px 0;
+  border-color:transparent red;
+}
+.triangle-isosceles:after {
+  content:"";
+  position:absolute;
+  bottom:-15px; /* value = - border-top-width - border-bottom-width */
+  left:50px; /* controls horizontal position */
+  border-width:15px 15px 0; /* vary these values to change the angle of the vertex */
+  border-style:solid;
+  border-color:red transparent;
+  /* reduce the damage in FF3.0 */
+  display:block;
+  width:0;
+}
+.triangle-isosceles.left:after {
+  top:7px; /* controls vertical position */
+  left:-12px; /* value = - border-left-width - border-right-width */
+  bottom:auto;
+  border-width:5px 13px 5px 0;
+  border-color:transparent #ffa8a8;
+}
+
+

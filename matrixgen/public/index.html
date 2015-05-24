@@ -1,0 +1,93 @@
+<html>
+
+    <head>
+        <link rel="stylesheet" type="text/css" href="./matrix.css"/>
+        <script type="text/javascript" src="matrix.js"></script>
+        <title>Random Matrix Generator</title>
+    </head>
+
+    <body>
+        <div id="divForm">
+            <h1>Random Matrix Generator</h1>
+            <p>Enter your selections below, and a random matrix will be generated.</p>
+            <form>
+                <table>
+                    <tr>
+                        <td>Number of rows:</td>
+                        <td><input type="text" id="inputRows" value="4"/></td>
+                        <td><p class="triangle-isosceles left">Please keep the number of rows at 15 or less.</p></td>
+                    </tr>
+                    <tr>
+                        <td>Number of columns:</td>
+                        <td><input type="text" id="inputCols" value="4"/></td>
+                        <td><p class="triangle-isosceles left">Please keep the number of columns at 15 or less.</p></td>
+                    </tr>
+                    <tr>
+                        <td>Minimum value:</td>
+                        <td><input type="text" id="inputMin" value="-20"/></td>
+                        <td><p class="triangle-isosceles left">Please don't use non-integer values.</p></td>
+                    </tr>
+                    <tr>
+                        <td>Maximum value:</td>
+                        <td><input type="text" id="inputMax" value="20"/></td>
+                        <td><p class="triangle-isosceles left">Please keep the maximum at 999 or lower.</p></td>
+                    </tr>
+                </table>
+                <input type="button" value="Submit" id="buttonSubmit" onclick="createMatrix()"/>
+            </form>
+        </div>
+        <div id="divError" class="hidden"></div>
+
+        <div id="divMatrix">
+
+            <!--
+            <table class="tableOuterMatrix">
+                <tr class="matrixTop">
+                    <td><img src="left-bracket-top.png"/></td>
+                    <td></td>
+                    <td><img src="right-bracket-top.png"/></td>
+                </tr>
+                <tr class="trMiddleRow">
+                    <td><img src="left-bracket-middle.png" class="bracketMiddle"/></td>
+                    <td class="tdMatrixCell">
+                        <table id="tableMatrix">
+                        </table>
+                    </td>
+                    <td><img src="right-bracket-middle.png" class="bracketMiddle"/></td>
+                </tr>
+                <tr class="matrixBottom">
+                    <td><img src="left-bracket-bottom.png"/></td>
+                    <td></td>
+                    <td><img src="right-bracket-bottom.png"/></td>
+                </tr>
+            </table>
+            -->
+
+
+            <div class="divTable">
+                <div class="divTableRow">
+                    <div class="divTableData"><img src="left-bracket-top.png" class="imgBracketTop"/></div>
+                    <div class="divTableData"></div>
+                    <div class="divTableData"><img src="right-bracket-top.png" class="imgBracketTop"/></div>
+                </div>
+                <div class="divTableRow">
+                    <div class="divTableData divCenterRow"><img src="left-bracket-middle.png" class="imgBracketMiddle"/></div>
+                    <div id="divDataMatrix" class="divTableData divCenterRow">
+                        <table id="tableMatrix" class="tableInnerMatrix" style="float: right;">
+                        </table>
+                    </div>
+                    <div class="divTableData divCenterRow"><img src="right-bracket-middle.png" class="imgBracketMiddle"/></div>
+                </div>
+                <div class="divTableRow">
+                    <div class="divTableData"><img src="left-bracket-bottom.png" class="imgBracketBottom"/></div>
+                    <div class="divTableData"></div>
+                    <div class="divTableData"><img src="right-bracket-bottom.png" class="imgBracketBottom"/></div>
+                </div>
+            </div>
+            <form>
+                <input type="button" class="hidden" value="Create another matrix" onclick="resetPage()"/>
+            </form>
+        </div>
+    </body>
+
+</html>
